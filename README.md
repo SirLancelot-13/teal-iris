@@ -44,12 +44,6 @@ Repository for Team teal-iris - Spring 2026 Cohort. It is structured as a monore
 └── README.md             # Project documentation 
 
 ```   
-<!-- The closing backticks were missing -->
-<!-- The table in team members name section wouldn't render correctly in VS Code -->
-<!-- This caused me to look for the reason -->
-
-
-
 
 ## Project Team
 
