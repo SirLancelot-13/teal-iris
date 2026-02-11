@@ -1,4 +1,4 @@
-import { Controller, Get, Patch, Body } from "@nestjs/common";
+import { Controller, Get, Patch, Body, Request } from "@nestjs/common";
 import { UsersService } from "./users.service.js";
 import { UpdateProfileDto } from "./dto/update-profile.dto.js";
 
@@ -7,14 +7,12 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get("me")
-  async getProfile() {
-    const userId = "0564560c-1d7d-4a8e-a81d-117e6e18dbab";
-    return this.usersService.getProfile(userId);
+  async getProfile(@Request() req) {
+    return this.usersService.getProfile(req.user.id);
   }
 
   @Patch("me")
-  async updateProfile(@Body() dto: UpdateProfileDto) {
-    const userId = "0564560c-1d7d-4a8e-a81d-117e6e18dbab";
-    return this.usersService.updateProfile(userId, dto);
+  async updateProfile(@Request() req, @Body() dto: UpdateProfileDto) {
+    return this.usersService.updateProfile(req.user.id, dto);
   }
 }
