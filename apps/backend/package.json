@@ -21,7 +21,8 @@
     "test:e2e": "NODE_OPTIONS=--experimental-vm-modules jest --config ./test/jest-e2e.json --passWithNoTests",
     "drizzle-kit": "drizzle-kit --config ./drizzle.config.ts",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "seed:languages": "pnpx dotenv-cli -e ../../.env -- tsx src/db/seed_languages.ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
