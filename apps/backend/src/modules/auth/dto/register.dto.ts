@@ -1,6 +1,4 @@
-// apps/backend/src/auth/dto/register.dto.ts
-//Request validations
-
+// apps/backend/src/modules/auth/dto/register.dto.ts
 import {
   IsEmail,
   IsOptional,
@@ -28,7 +26,6 @@ export class RegisterDto {
   @MaxLength(100)
   lastName?: string;
 
-  // Language fields
   @IsString()
   @MaxLength(10)
   @Matches(/^[a-z]{2}$/, {
