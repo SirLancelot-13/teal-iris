@@ -15,7 +15,7 @@ import { GoogleStrategy } from "./strategies/google.strategy.js";
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: path.resolve(process.cwd(), ".env"), // root .env
+      envFilePath: path.resolve(process.cwd(), "../../.env"), // root .env
     }),
     PassportModule,
     JwtModule.registerAsync({
