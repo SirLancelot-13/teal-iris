@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 # Docker
 docker-compose.override.yml
+
+# Prevent accidental commit of backend lockfile
+apps/backend/pnpm-lock.yaml
